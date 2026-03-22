@@ -1,0 +1,58 @@
+{% include 'layout.html' %}
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <div class="card shadow-lg rounded-4 p-4 edit-todo-card">
+
+        <!-- HEADER -->
+        <div class="card-header text-center bg-warning text-white rounded-top-4 mb-3">
+            <h3 class="mb-0 fw-bold">✏️ Edit Your Todo</h3>
+            <small class="text-white-50">Update your task or mark it complete!</small>
+        </div>
+
+        <!-- BODY -->
+        <div class="card-body">
+            <form id="editTodoForm">
+
+                <!-- TITLE -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Title</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-0">🖊️</span>
+                        <input type="text" class="form-control form-control-lg" name="title" value="{{todo.title}}" required>
+                    </div>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Description</label>
+                    <textarea name="description" class="form-control form-control-lg" rows="3" required>{{todo.description}}</textarea>
+                </div>
+
+                <!-- PRIORITY -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Priority</label>
+                    <select name="priority" class="form-select form-select-lg">
+                        {% for i in range(1,6) %}
+                        <option {% if todo.priority == i %} selected {% endif %}>{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- COMPLETE CHECKBOX -->
+                <div class="form-check form-switch mb-4">
+                    <input class="form-check-input" type="checkbox" name="complete" {% if todo.complete %} checked {% endif %}>
+                    <label class="form-check-label fw-semibold">Complete</label>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="d-flex justify-content-between flex-wrap gap-2">
+                    <button type="submit" class="btn btn-warning btn-lg shadow-sm flex-grow-1">✏️ Edit Todo</button>
+                    <button id="deleteButton" type="button" class="btn btn-danger btn-lg shadow-sm flex-grow-1">🗑️ Delete</button>
+                    <a href="/todo/todo-page" class="btn btn-success btn-lg shadow-sm flex-grow-1">🔙 Back</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+{% include 'layout.html' %}
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <div class="card shadow-lg rounded-4 p-4 todo-card">
+
+        <!-- HEADER -->
+        <div class="card-header text-center bg-info text-white rounded-top-4 mb-3">
+            <h3 class="mb-0 fw-bold">📝 Create a New Todo</h3>
+            <small class="text-white-50">Add your tasks and stay productive!</small>
+        </div>
+
+        <!-- BODY -->
+        <div class="card-body">
+            <form id="todoForm">
+
+                <!-- TITLE -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Title</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light border-0">🖊️</span>
+                        <input type="text" class="form-control form-control-lg" name="title" placeholder="Enter task title" required>
+                    </div>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Description</label>
+                    <textarea class="form-control form-control-lg" rows="3" name="description" placeholder="Describe your task" required></textarea>
+                </div>
+
+                <!-- PRIORITY -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Priority</label>
+                    <select class="form-select form-select-lg" name="priority">
+                        <option value="1">1 - Lowest</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - Medium</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Highest</option>
+                    </select>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-info btn-lg shadow-sm w-50 me-2">➕ Add Todo</button>
+                    <a href="/todo/todo-page" class="btn btn-success btn-lg shadow-sm w-50 ms-2">🔙 Back</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

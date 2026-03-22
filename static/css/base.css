@@ -1,0 +1,105 @@
+/* GENEL BODY */
+body {
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  color: #33333a;
+  padding-top: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BAŞLIKLAR */
+h1, h2, h3, h4, h5, h6 {
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+/* ANA RENK */
+.main-color {
+  background: linear-gradient(135deg, #f47f0a, #ff9f43);
+  color: white !important;
+}
+
+/* CARD TASARIMI */
+.card {
+  border: none !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* CARD HOVER */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* TABLE */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #f1f5f9;
+}
+
+.table-hover tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f9fafb;
+  transform: scale(1.01);
+}
+
+/* TAMAMLANMIŞ TASK */
+.strike-through-td {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* BUTTONLAR */
+.btn {
+  border-radius: 999px !important;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border: none;
+}
+
+/* SUCCESS BUTTON */
+.btn-success {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+}
+
+/* INFO BUTTON */
+.btn-info {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  color: white;
+}
+
+/* BADGE */
+.badge {
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+/* SCROLLBAR (opsiyonel ama çok şık durur) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 10px;
+}
